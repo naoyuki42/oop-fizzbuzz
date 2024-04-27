@@ -9,19 +9,18 @@ use FizzBuzz\Result;
 
 class Addition extends Calculator
 {
-    private const SUCCESS_VALUE = 10;
-
     public function __construct(
         private readonly Result $result,
         private readonly NaturalNumber $addingNumber,
+        private readonly NaturalNumber $successNumber,
     ) {
         parent::__construct($result);
     }
 
     protected function calculate(NaturalNumber $targetNumber): bool
     {
-        $addedNumber = $targetNumber->value + $this->addingNumber->value;
+        $addedNumber = $targetNumber->add($this->addingNumber);
 
-        return $addedNumber === self::SUCCESS_VALUE;
+        return $addedNumber->equals($this->successNumber);
     }
 }

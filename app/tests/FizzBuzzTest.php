@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require_once 'vendor/autoload.php';
 
+use FizzBuzz\Calculator\Addition;
 use PHPUnit\Framework\TestCase;
 use FizzBuzz\FizzBuzz;
 use FizzBuzz\Result;
@@ -44,7 +45,14 @@ class FizzBuzzTest extends TestCase
                 new NaturalNumber(15),
                 '',
             ],
-
+            [
+                [
+                    new Addition(new Result('Fruits'), new NaturalNumber(2),  new NaturalNumber(5)),
+                    new Addition(new Result('Beef'), new NaturalNumber(7), new NaturalNumber(11)),
+                ],
+                new NaturalNumber(3),
+                'Fruits',
+            ],
         ];
     }
 }
