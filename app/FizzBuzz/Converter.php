@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace FizzBuzz\Calculator;
+namespace FizzBuzz;
 
 use FizzBuzz\NaturalNumber;
 use FizzBuzz\Result;
+use FizzBuzz\Calculator\Calculator;
 
 final class Converter
 {

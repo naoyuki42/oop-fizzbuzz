@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace FizzBuzz;
 
-use FizzBuzz\Calculator\Converter;
+use FizzBuzz\Converter;
 
 final class FizzBuzz
 {

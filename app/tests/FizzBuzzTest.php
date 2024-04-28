@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 require_once 'vendor/autoload.php';
 
-use FizzBuzz\Calculator\Addition;
 use PHPUnit\Framework\TestCase;
 use FizzBuzz\FizzBuzz;
-use FizzBuzz\Result;
 use FizzBuzz\NaturalNumber;
-use FizzBuzz\Calculator\Division;
-use FizzBuzz\Calculator\Converter;
+use FizzBuzz\Factory\AdditionConverterFactory;
+use FizzBuzz\Factory\DivisionConverterFactory;
 
 class FizzBuzzTest extends TestCase
 {
@@ -32,24 +30,24 @@ class FizzBuzzTest extends TestCase
         return [
             [
                 [
-                    new Converter(new Result('Fizz'), new Division(new NaturalNumber(3))),
-                    new Converter(new Result('Buzz'), new Division(new NaturalNumber(5))),
+                    DivisionConverterFactory::create('Fizz', new NaturalNumber(3)),
+                    DivisionConverterFactory::create('Buzz', new NaturalNumber(5)),
                 ],
                 new NaturalNumber(15),
                 'FizzBuzz',
             ],
             [
                 [
-                    new Converter(new Result('Cookie'), new Division(new NaturalNumber(2))),
-                    new Converter(new Result('Chocolate'), new Division(new NaturalNumber(7))),
+                    DivisionConverterFactory::create('Cookie', new NaturalNumber(2)),
+                    DivisionConverterFactory::create('Chocolate', new NaturalNumber(7)),
                 ],
                 new NaturalNumber(15),
                 '',
             ],
             [
                 [
-                    new Converter(new Result('Fruits'), new Addition(new NaturalNumber(2),  new NaturalNumber(5))),
-                    new Converter(new Result('Beef'), new Addition(new NaturalNumber(7),  new NaturalNumber(11))),
+                    AdditionConverterFactory::create('Fruits', new NaturalNumber(2),  new NaturalNumber(5)),
+                    AdditionConverterFactory::create('Beef', new NaturalNumber(7),  new NaturalNumber(11)),
                 ],
                 new NaturalNumber(3),
                 'Fruits',
