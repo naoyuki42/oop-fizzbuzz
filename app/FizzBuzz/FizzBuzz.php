@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace FizzBuzz;
 
-use FizzBuzz\Calculator\Calculator;
+use FizzBuzz\Calculator\Converter;
 
 final class FizzBuzz
 {
     /**
-     * @param Calculator[] $calculators
+     * @param Converter[] $converters
      */
     public function __construct(
-        private readonly array $calculators,
+        private readonly array $converters,
     ) {}
 
     public function execute(NaturalNumber $target): string
@@ -24,8 +24,8 @@ final class FizzBuzz
     {
         $summary = '';
 
-        foreach($this->calculators as $calculator) {
-            $summary .= $calculator->execute($target);
+        foreach($this->converters as $converter) {
+            $summary .= $converter->execute($target);
         }
 
         return $summary;

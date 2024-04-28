@@ -10,6 +10,7 @@ use FizzBuzz\FizzBuzz;
 use FizzBuzz\Result;
 use FizzBuzz\NaturalNumber;
 use FizzBuzz\Calculator\Division;
+use FizzBuzz\Calculator\Converter;
 
 class FizzBuzzTest extends TestCase
 {
@@ -31,24 +32,24 @@ class FizzBuzzTest extends TestCase
         return [
             [
                 [
-                    new Division(new Result('Fizz'), new NaturalNumber(3)),
-                    new Division(new Result('Buzz'), new NaturalNumber(5)),
+                    new Converter(new Result('Fizz'), new Division(new NaturalNumber(3))),
+                    new Converter(new Result('Buzz'), new Division(new NaturalNumber(5))),
                 ],
                 new NaturalNumber(15),
                 'FizzBuzz',
             ],
             [
                 [
-                    new Division(new Result('Cookie'), new NaturalNumber(2)),
-                    new Division(new Result('Chocolate'), new NaturalNumber(7)),
+                    new Converter(new Result('Cookie'), new Division(new NaturalNumber(2))),
+                    new Converter(new Result('Chocolate'), new Division(new NaturalNumber(7))),
                 ],
                 new NaturalNumber(15),
                 '',
             ],
             [
                 [
-                    new Addition(new Result('Fruits'), new NaturalNumber(2),  new NaturalNumber(5)),
-                    new Addition(new Result('Beef'), new NaturalNumber(7), new NaturalNumber(11)),
+                    new Converter(new Result('Fruits'), new Addition(new NaturalNumber(2),  new NaturalNumber(5))),
+                    new Converter(new Result('Beef'), new Addition(new NaturalNumber(7),  new NaturalNumber(11))),
                 ],
                 new NaturalNumber(3),
                 'Fruits',
