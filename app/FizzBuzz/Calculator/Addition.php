@@ -15,8 +15,8 @@ class Addition implements Calculator
 
     public function calculate(NaturalNumber $targetNumber): bool
     {
-        $addedNumber = $targetNumber->add($this->addingNumber);
+        $addedNumber = $targetNumber->value + $this->addingNumber->value;
 
-        return $addedNumber->equals($this->successNumber);
+        return $addedNumber === $this->successNumber->value;
     }
 }

@@ -15,14 +15,4 @@ final class NaturalNumber
             throw new InvalidArgumentException();
         }
     }
-
-    public function equals(NaturalNumber $target): bool
-    {
-        return $this->value === $target->value;
-    }
-
-    public function add(NaturalNumber $target): self
-    {
-        return new self($this->value + $target->value);
-    }
 }
