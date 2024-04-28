@@ -15,17 +15,17 @@ final class FizzBuzz
         private readonly array $converters,
     ) {}
 
-    public function execute(NaturalNumber $target): string
+    public function execute(NaturalNumber $targetNumber): string
     {
-        return $this->summarize($target);
+        return $this->summarize($targetNumber);
     }
 
-    private function summarize(NaturalNumber $target): string
+    private function summarize(NaturalNumber $targetNumber): string
     {
         $summary = '';
 
         foreach($this->converters as $converter) {
-            $summary .= $converter->convert($target);
+            $summary .= $converter->convert($targetNumber);
         }
 
         return $summary;
