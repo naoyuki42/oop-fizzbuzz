@@ -25,7 +25,7 @@ final class FizzBuzz
         $summary = '';
 
         foreach($this->converters as $converter) {
-            $summary .= $converter->execute($target);
+            $summary .= $converter->convert($target);
         }
 
         return $summary;

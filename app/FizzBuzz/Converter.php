@@ -15,7 +15,7 @@ final class Converter
         private readonly Calculator $calculator
     ) {}
 
-    public function execute(NaturalNumber $targetNumber): string
+    public function convert(NaturalNumber $targetNumber): string
     {
         return $this->result->get($this->calculator->calculate($targetNumber));
     }
