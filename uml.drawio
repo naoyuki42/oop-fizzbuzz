@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="kFTg7r9xIrmnurWcg6Hi" name="ページ1">
-        <mxGraphModel dx="1356" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="716" dy="553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="4" value="&lt;b&gt;NaturalNumber&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="660" y="200" width="140" height="58" as="geometry"/>
+                    <mxGeometry x="660" y="220" width="140" height="58" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="+ value: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="4" vertex="1">
                     <mxGeometry y="30" width="140" height="20" as="geometry"/>
@@ -131,6 +131,12 @@
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="397.1724137931037" y="520" as="sourcePoint"/>
                         <mxPoint x="650.4137931034484" y="448" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="66" value="" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;" edge="1" parent="1" source="40" target="4">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="590" y="249.34482758620686" as="sourcePoint"/>
+                        <mxPoint x="670" y="243.8275862068965" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
