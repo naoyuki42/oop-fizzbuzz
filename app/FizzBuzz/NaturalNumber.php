@@ -8,10 +8,12 @@ use InvalidArgumentException;
 
 final class NaturalNumber
 {
+    private const LOWER_LIMIT = 0;
+
     public function __construct(
         public readonly int $value,
     ) {
-        if ($value <= 0) {
+        if ($value <= self::LOWER_LIMIT) {
             throw new InvalidArgumentException();
         }
     }
